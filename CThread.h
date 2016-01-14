@@ -92,8 +92,6 @@ private:
 	bool m_bRunning;
 };
 
-#endif // _TEMPLATE_THREAD_H_
-
 template<typename T>
 bool CThread<T>::Start()
 {
@@ -173,7 +171,7 @@ unsigned int __stdcall CThread<T>::ThreadProcess(void *lpParam)
 {
 	CThread *cls = (CThread *)lpParam;
 
-	if (cls != nullptr)
+	if (cls != NULL)
 	{
 		if(cls->m_bRunning)
 		{
@@ -183,3 +181,5 @@ unsigned int __stdcall CThread<T>::ThreadProcess(void *lpParam)
 
 	return 0;
 }
+
+#endif // _TEMPLATE_THREAD_H_
